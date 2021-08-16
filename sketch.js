@@ -73,10 +73,23 @@ function draw() {
  
   packageSprite.x= packageBody.position.x 
   packageSprite.y= packageBody.position.y 
-  Matter.Body.translate(packageBody,{x:-20,y:0})
+ 
   
   drawSprites();
   
   
  
+}
+function keyPressed(){
+if(keyCode===LEFT_ARROW){
+helocpterSprite.x= helocpterSprite.x-20
+Matter.Body.translate(packageBody,{x:-20,y:0})
+}
+else if (keyCode===RIGHT_ARROW){
+helocpterSprite.x= helocpterSprite.x+20
+Matter.Body.translate(packageBody,{x:20,y:0}) 
+}
+else if	(keyCode===DOWN_ARROW){
+Matter.Body.Static(packageBody,false)
+}
 }
