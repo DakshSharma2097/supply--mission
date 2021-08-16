@@ -73,7 +73,7 @@ function draw() {
  
   packageSprite.x= packageBody.position.x 
   packageSprite.y= packageBody.position.y 
-
+  Matter.Body.translate(packageBody,{x:-20,y:0})
   
   drawSprites();
   
